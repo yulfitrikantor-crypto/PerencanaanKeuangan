@@ -3,42 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Perencanaan - SOLID</title>
+    <title>Dashboard & Perencanaan Proyek - SOLID</title>
     <style>
-        /* CSS Sederhana untuk mempercantik tampilan */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f9;
+            background-color: #f4f6f9;
             color: #333;
-        }
-        header {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-        main {
-            margin-top: 20px;
-            background: white;
             padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #007bff;
+            color: white;
             border-radius: 8px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Styling Grid Menu Dashboard */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .menu-card {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .menu-card:hover {
+            background-color: #007bff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Styling Area Konten Perencanaan */
+        main.content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        main.content-box h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        main.content-box p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        main.content-box ul {
+            margin-left: 20px;
+            line-height: 1.8;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Perencanaan Proyek SOLID</h1>
-    </header>
+    <div class="container">
+        <!-- Header Utama -->
+        <header>
+            <h1>DASHBOARD UTAMA</h1>
+            <p>Sistem Informasi dan Pelayanan Internal</p>
+        </header>
 
-    <main>
-        <h2>Langkah Perencanaan</h2>
-        <p>Ini adalah halaman perencanaan yang dibuat menggunakan dokumen HTML5.</p>
-        <ul>
-            <li>Analisis Kebutuhan</li>
-            <li>Desain Sistem</li>
-            <li>Implementasi Kode</li>
-        </ul>
-    </main>
+        <!-- Menu Dashboard Navigasi -->
+        <div class="menu-grid">
+            <a href="umum.html" class="menu-card">Umum</a>
+            <a href="kepegawaian.html" class="menu-card">Kepegawaian</a>
+            <a href="keuangan.html" class="menu-card">Keuangan</a>
+            <a href="aset.html" class="menu-card">Aset</a>
+            <a href="#perencanaan" class="menu-card">Perencanaan</a>
+            <a href="pelayanan-publik.html" class="menu-card">Pelayanan Publik</a>
+            <a href="zona-integritas.html" class="menu-card">Zona Integritas</a>
+            <a href="tkrs.html" class="menu-card">TKRS</a>
+            <a href="kinerja.html" class="menu-card">Kinerja</a>
+            <a href="spo.html" class="menu-card">SPO</a>
+            <a href="inovasi.html" class="menu-card">Inovasi</a>
+        </div>
+
+        <!-- Isi Konten Perencanaan -->
+        <main class="content-box" id="perencanaan">
+            <h2>Perencanaan Proyek SOLID</h2>
+            <p>Ini adalah halaman perencanaan yang dibuat menggunakan dokumen HTML5.</p>
+            <h3>Langkah Perencanaan:</h3>
+            <ul>
+                <li>Analisis Kebutuhan</li>
+                <li>Desain Sistem</li>
+                <li>Implementasi Kode</li>
+            </ul>
+        </main>
+    </div>
 
 </body>
 </html>
